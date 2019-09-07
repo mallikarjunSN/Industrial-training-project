@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="card">
+                <h1>Welcome </h1>
+                <a routerLink="/home">go to home</a>
+                <form (submit)="addBook(bookForm)" #bookForm="ngForm">
+                    <p for="title">Title of the book</p>
+                    <input name="title" ngModel required #title="ngModel">
+                    <p for="author">author of the book</p>
+                    <input name="author" ngModel required #author="ngModel">
+                    <p for="pages">no of pages of the book</p>
+                    <input name="pages" ngModel required #pages="ngModel">
+                    <p for="price">price of the book</p>
+                    <input name="price" ngModel required #price="ngModel">
+                    <p for="_id">ISBN of the book</p>
+                    <input name="_id" ngModel required #_id="ngModel">
+
+                    <p for="language">Language of the book</p>
+                    <input name="language" ngModel required #language="ngModel">
+                    <p for="genre">Genre :: </p>
+                    <input name="genre" ngModel required #genre="ngModel">
+                    <p for="genre">URL</p>
+                    <input type="url" name="url" ngModel required #url="ngModel">
+                    <button type="submit" style="margin-top: 10px;">Add Book</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

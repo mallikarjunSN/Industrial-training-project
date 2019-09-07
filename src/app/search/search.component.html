@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 style="text-align: center;">Search Results</h1>
+    <div class="container">
+        <div class="row" *ngFor="let i of result">
+            <div class="col-lg-3 card">
+                <span>Front page of the book</span>
+                 <a (click)="viewBook(i)"><img src="assets/images/{{i.url}}" alt="image of the front page"></a>
+
+            </div>
+            <div class="col-lg-6 card">
+                <table class="table">
+                    <tr>
+                        <th><b>{{i.title}}</b></th>
+                    </tr>
+                    <tr>
+                        <td>by <b> {{i.author}}</b></td>
+                    </tr>
+                    <tr>
+                        <td>{{i.pages}} pages</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-rupee-sign" style="color: silver;"></i> {{i.price}}</td>
+                    </tr>
+                    <tr>
+                        <td>Language: <em>{{i.language}}</em></td>
+                    </tr>
+                </table>
+                <!-- <div class="row">
+                    <div class="col-lg-6"><button>add to cart</button></div>
+                    <div class="col-lg-6"><button>buy now</button></div>
+                </div> -->
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+

@@ -1,0 +1,58 @@
+.card{
+/* background-color: rgba(0,0,0,0.5) !important; */
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10px;
+    /* background-color:  #306EFF;   */
+    background-color: rgba(48, 110, 255 ,0.5) !important;
+}
+
+input{
+    width: 80%; 
+    margin: 5%;
+    border-radius: 20px; 
+    text-align: center;
+}
+
+i{
+    font-size: 20px;
+    color: orange;
+}
+h1{
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    color: orange;
+}
+
+button{
+    align-content: center;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    border-radius: 20px;  
+    width: 100%;
+    /* margin-left: 38%; */
+}
+
+span{
+    text-align: center;
+    color: yellow;
+}
+
+
+a{
+    text-align: center;
+    color: silver;
+
+}
+.input{
+    width: 80%;
+}
+img{
+    padding: 5%;
+    border-radius: 10px;
+    height: 80%;
+    width: 100%;
+    align-content: center;
+}

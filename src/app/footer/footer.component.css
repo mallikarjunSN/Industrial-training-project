@@ -1,0 +1,23 @@
+a,.col-lg-4,.col-md-4{
+    text-align: center;
+    font-size: 25px;
+    color: silver;
+
+}
+
+h3,p{
+    text-align: center;
+    color: white;
+}
+.bottom,.a{
+    padding-top: 30px;
+    background-color: darkslategray;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    position: fixed;
+    color: white;
+    border: 1;
+    border-style: solid;
+    border-color: white;
+    position: relative;
+}

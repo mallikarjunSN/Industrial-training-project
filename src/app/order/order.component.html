@@ -1,0 +1,41 @@
+<div class="container">
+        <div>
+            <h1>Orders</h1>
+            <div>
+                <div class="row" *ngFor="let i of orders">
+                    <div class="col-lg-1"></div>
+        
+                    <div class="col-lg-3 card">
+                        <div>
+                            <div (click)="viewBook(i)"><img src="assets/images/{{i.url}}"  alt="image of the front page"></div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-6 card">
+                        <table class="table">
+                            <tr>
+                                <td><b>{{i.title}}</b></td>
+                            </tr>
+                            <tr>
+                                <td>by <b> {{i.author}}</b></td>
+                            </tr>
+                            <tr>
+                                <td>{{i.pages}} pages</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-rupee-sign"></i>{{i.price}}</td>
+                            </tr>
+                            <tr>
+                                <td>Language: <em>{{i.language}}</em></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 style="color: red;">{{error}}</h1>
+        </div> 
+    
+    </div>

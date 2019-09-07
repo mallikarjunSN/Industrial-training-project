@@ -1,0 +1,52 @@
+<!-- <form class="modal-content" (submit)="signUp(signupForm)"  #signupForm="ngForm">
+  <div class="container">
+    <h1 style="text-align: center; color: dodgerblue">Sign Up</h1>
+    <p style="text-align: center;color: peru">Please fill up your details to create an account.</p>
+    <hr>
+    
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" ngModel required #username="ngModel">
+
+    <label for=""><b>Phone No</b></label>
+    <input type="text" placeholder="Enter ph no" name="phone" ngModel required #phone="ngModel">
+
+    <p for=""><b>Password</b></p>
+    <input type="password" placeholder="Enter Password" name="password" ngModel required #password="ngModel">
+
+    <br>
+      <p style="font-weight: bold;">Do you want to add your address now??</p>
+      <select name="status" class="select" ngModel required #status="ngModel">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <br>
+    <button type="submit" class="signupbtn">Sign Up</button>
+  </div>
+</form> -->
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div class="card">
+          <h1>Signup</h1>
+          <form (submit)="signUp(signupForm)"  #signupForm="ngForm">
+            <i class="fa fa-user"></i> 
+            <input type="text" placeholder="Enter Username" name="username" ngModel required #username="ngModel">
+            <br>
+            <i class="fa fa-phone">
+            </i>
+            <input type="text" placeholder="Enter ph no" name="phone" ngModel required #phone="ngModel">
+            <br>
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Enter Password" name="password" ngModel required #password="ngModel">
+            <br>
+            <button type="submit">Sign Up</button>
+          </form>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>

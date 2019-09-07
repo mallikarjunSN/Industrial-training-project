@@ -1,0 +1,26 @@
+<div class="container-fluid toolbar">
+    <div class="row" style="height: 100%">
+        <div class="col col-lg-4">
+            <a routerLink="/home"><h1 class="fa fa-book name" style="font-size: 40px;padding-left: 10%">Onlinepustaka.com</h1></a>
+        </div>
+        <div class="col col-lg-4">
+            <form (submit)="searchBooks(inputForm)" #inputForm="ngForm">
+                <input type="text" placeholder="   title/author" class="input" ngModel name="input" required #input="ngModel"> 
+                <button type="submit" class="fa fa-search btn"></button>
+            </form>
+        </div>
+        <div class="col col-lg-4" style="font-weight:bold;font-size: 25px;">
+            <a href="" *ngIf="!logInfo" class="fa fa-user" routerLink='/login'>Login</a>
+            <span><a  class="fas fa-shopping-cart" (click)="gotoCart()" routerLink="/cart" style="padding-left: 30px;">Cart</a></span>
+
+            <div class="dropdown">
+                <a class="fas fa-caret-square-down" style="padding-left: 30px;caret-color: white;">More</a>
+                <div class="dropdown-content">
+                    <p><i class="fas fa-truck-moving" *ngIf="logInfo"></i> <a routerLink="/order" *ngIf="logInfo">My orders</a></p>
+                    <p><i class="fas fa-user" *ngIf="logInfo"></i> <a href="/home" *ngIf="logInfo">Logout</a></p>
+                    <p><i class="fas fa-cog"></i> <a style="margin-left: 5px; font-family: 'ABeeZee';" href="">Settings</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

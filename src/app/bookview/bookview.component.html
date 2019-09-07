@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="container-fluid row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+            <img src="assets/images/{{book.url}}" alt="dsjkdfh">
+        </div>
+        <div class="col-lg-6">
+            <h1>Details of the book</h1>
+            <ul type="none">
+                <!-- <li>{{book.title}}</li> -->
+                <li>by <b>{{book.author}}</b> </li>
+                <li>language : <b>{{book.language}}</b> </li>
+                <li>genre : {{book.genre}}</li>
+                <li>{{book.pages}} pages</li>
+                <li><i class="fas fa-rupee-sign"></i>{{book.price}}</li>
+                <li>ISBN <b>{{book._id}}</b></li>
+            </ul> 
+
+            <h2>Star Rating</h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <div class="row">
+        <h2 style="padding-left:40%;">About the book</h2>
+        <!-- <p *ngFor="let i of book.reviews"> -->
+        <!-- <p>
+            lfhsdfsdkjfn
+
+            {{i}}
+        </p> -->
+    </div>
+    <div class="row">
+        <div  class="col-lg-6">
+            <button (click)="addToCart()">add to cart</button>
+        </div>
+        <div class="col-lg-6">
+            <button (click)="orderOne()">Buy now</button>
+        </div>
+    </div>
+</div>

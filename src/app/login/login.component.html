@@ -1,0 +1,78 @@
+<div id="top"></div>
+<!-- <body> 
+  <div class="container-fluid " style="padding-top: 5%;">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card" style="padding-bottom: 5%;">
+          <div class="card-header">
+            <h3>Sign In</h3>
+          </div>
+          <div class="card-body">
+
+
+            <form (submit)="userLogin(loginForm)" #loginForm="ngForm">
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="username" ngModel name="username" required #username="ngModel">
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="password" ngModel name="password" required #password="ngModel">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Login" class="btn float-right login_btn">
+              </div>
+            </form>
+
+
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links" style="color: blue;">
+              Don't have an account?<a routerLink="/signup">Sign Up</a>
+            </div>
+            <div class="d-flex justify-content-center" style="color: blue;">
+              <a href="#" class="">Forgot your password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <p class="footer" style="align-content: center;padding-top: 50px;margin-left: 45%;margin-bottom: 0px;">
+        <a href="#" class="fa fa-home">Onlinepustaka.com</a>
+    </p>
+  </div>
+
+</body> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div class="card">
+        <h1>Login</h1>
+        <form (submit)="userLogin(loginForm)" #loginForm="ngForm">
+          <i class="fa fa-user"></i> 
+          <input type="text" placeholder="username" name="username" ngModel required #username="ngModel">
+          <br>
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" name="password" ngModel required #password="ngModel">
+          <br>
+          <button type="submit">login</button>
+        </form>
+        <span>Don't have an account?</span> <a routerLink="/signup">Sign Up</a>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+        
+    </div>
+  </div>
+</div>

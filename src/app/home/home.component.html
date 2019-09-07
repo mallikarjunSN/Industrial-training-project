@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="container-fluid card" style="padding-top: 3%;">
+        <div class="container-fluid row">
+            <div class="col-lg-12">
+                    <h1 style="text-align: center;font-size: 40px;color:black;">{{message}}</h1>
+            </div>
+        </div>
+        <div class="container-fluid row">
+            <div class="col-md-7">
+                <h1>Explore</h1>
+            </div>
+            <div class="col-md-5">
+                <i class="fa fa-search" style="font-size:70px;color:silver;align-content: left;"></i>
+            </div>
+        </div>
+
+        <div class="container-fluid row">
+            <div class="book col-sm-3"> 
+                <i class="fas fa-atom"></i> 
+                <a id="science" [routerLink]="['/explore', 'science' ]">Science</a>
+            </div>
+            <div class="book col-sm-3" > 
+                <i class="fas fa-spa"></i> 
+                <a [routerLink]="['/explore','kannada' ]">Kannada</a>
+            </div>
+            <div class="book col-sm-3" > 
+                <i class="fas fa-user-secret"></i> 
+                <a [routerLink]="['/explore','mystery' ]">Mystery</a>
+            </div>
+        </div>
+        <div class="container-fluid row">
+            <div class="book col-sm-3" > 
+                <i class="fas fa-laptop-code"></i> 
+                <a [routerLink]="['/explore','technology' ]">Tech</a>
+            </div>
+            <div class="book col-sm-3" > 
+                <i class="fas fa-user-astronaut"></i> 
+                <a [routerLink]="['/explore','fiction' ]">Sci-Fi</a>
+            </div>
+            <div class="book col-sm-3" >
+                <i class="fas fa-user"></i> 
+                <a [routerLink]="['/explore','biography' ]">Biography</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid card" style="padding-top: 3%;margin-top: 5%;">
+            <div class="container-fluid row">
+                <div class="col-md-6">
+                    <h1>Popular Books</h1>
+                </div>
+                <div class="col-md-5">
+                    <i class="fa fa-book-open" style="font-size:90px;color:goldenrod;"></i>
+                </div>
+            </div>
+            <div class="container row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                        <div class="card">
+                            <a (click)="viewBook(popular)"><img src="assets/images/{{popular.url}}"  alt=""></a> 
+                        </div>
+                    <!-- <img src="assets/images/{{popular.url}}" alt="img of popular book"> -->
+                    <br>
+                    <button (click)="prev()">previous</button><button (click)="next()">next</button>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+</div>
+
+
+<!-- <a routerLink="/demo"> goto demo</a> -->
+

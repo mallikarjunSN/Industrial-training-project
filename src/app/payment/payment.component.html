@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 card">
+            <h1>Select payment method</h1>
+            <select id="" (click)=fn() ngModel name="payment" required #payment="ngModel"> 
+                <option value="debit">debit card</option>
+                <option value="upi">UPI</option>
+                <option value="netbanking">netbanking</option>
+                <option value="cod">cash on delivery</option>
+            </select>
+
+            <div *ngIf="payment.value=='debit'">
+                <h3>Enter debit card details</h3>
+                <form action=""  name="debitForm" #debitForm="ngForm">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><span>Card No</span>
+                            </td>
+                            <td>
+                                <input minlength="16" maxlength="16" placeholder="card-no" type="text" ngModel required name="cardNo" #cardNo="ngModel">
+                                <span *ngIf="!cardNo.valid">please enter a valid card No</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Expiry Date</span>
+                            </td>
+                            <td>
+                                <input placeholder="exp-date(MM/YY)" type="month" ngModel required name="eDate" #eDate="ngModel">
+                                <span *ngIf="!eDate.valid">please enter date</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>CVV</span>
+                            </td>
+                            <td>
+                                <input minlength="3" maxlength="3" placeholder="CVV" type="password" ngModel required name="cvv" #cvv="ngModel">
+                                <span *ngIf="!cvv.valid">please enter valid CVV</span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div *ngIf="payment.valid">
+                    <button (click)="place()">Proceed</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+
+
+</div>
